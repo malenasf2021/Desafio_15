@@ -122,21 +122,21 @@ del mismo paquete, sin necesidad de exponerlos al exterior.
 Esta clase abstracta incluye un constructor que inicializa estos atributos y define un método abstracto avanzar(), el cual 
 se implementará en cada subclase con su propio comportamiento específico de avance. 
 
-Además, se incluyen métodos ```java getNombre() y getDistanciaRecorrida() ``` para acceder a los valores de estos atributos.
-Las subclases Auto y Moto heredan de Vehiculo (mediante extends) e implementan de forma concreta el método ```java avanzar() ```. 
+Además, se incluyen métodos `getNombre() y getDistanciaRecorrida()` para acceder a los valores de estos atributos.
+Las subclases Auto y Moto heredan de Vehiculo (mediante extends) e implementan de forma concreta el método `avanzar()`. 
 Cada una de estas subclases utiliza un objeto Random para determinar de forma aleatoria la distancia en metros que avanzan en cada turno. 
-La distancia se acumula en la variable ```java distanciaRecorrida ```, y mediante ```java System.out.println ``` se muestran el tipo de vehículo, 
+La distancia se acumula en la variable `distanciaRecorrida`, y mediante `System.out.println` se muestran el tipo de vehículo, 
 su avance y el total acumulado.
 
 En la clase principal Desafio_15, se crea un arreglo polimórfico de tipo Vehiculo[ ] que contiene instancias de Auto y Moto. 
-Acá se aprovecha el polimorfismo, ya que se puede llamar al método ```java avanzar() ``` sobre referencias de tipo Vehiculo y se ejecuta 
+Acá se aprovecha el polimorfismo, ya que se puede llamar al método `avanzar()` sobre referencias de tipo Vehiculo y se ejecuta 
 la implementación correspondiente a cada subclase. 
 
-Luego se implementa un bucle for que simula cinco rondas de la carrera, invocando el método ```java avanzar() ``` para cada vehículo en cada ronda.
+Luego se implementa un bucle for que simula cinco rondas de la carrera, invocando el método `avanzar()` para cada vehículo en cada ronda.
 Al finalizar las rondas, se determina el ganador mediante la comparación de las distancias recorridas. 
 
 Inicialmente, se considera que el primer vehículo del arreglo es el ganador provisorio, y mediante un bucle for se va comparando 
-la ```java DistanciaRecorrida() ``` de cada vehículo con el ganador provisorio y se va actualizando la variable ganador con el que recorrió más distancia. 
+la `DistanciaRecorrida()` de cada vehículo con el ganador provisorio y se va actualizando la variable ganador con el que recorrió más distancia. 
 
 Se imprime en pantalla el nombre del vehículo ganador junto con la distancia total recorrida en metros: 
 ```java
